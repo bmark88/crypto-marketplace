@@ -1,8 +1,12 @@
-
+.favourite-coins {
+  width: 80%;
+  margin: 0 auto;
+}
 
 /* Favourite coins */
 h1 {
-  position: absolute;
+  padding-bottom: 3.75rem;
+  // position: absolute;
   width: 213px;
   height: 37px;
   left: 36px;
@@ -20,12 +24,16 @@ h1 {
   
   /* white */
   color: #FFFFFF;
+
+  @media (min-width: 768px) {
+    padding-bottom: 5.375rem;
+  }
 }
 
 h2 {
   /* No Favourite Coins Added */
 
-  position: absolute;
+  // position: absolute;
   width: 158px;
   height: 17px;
   left: 36px;

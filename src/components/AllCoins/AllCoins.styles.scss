@@ -1,0 +1,135 @@
+h3 {
+ /* All Coins */
+
+  // position: absolute;
+  width: 90px;
+  height: 23px;
+  left: 32px;
+  top: 299px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+
+  font-family: Gibson;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 127.34%;
+
+  white-space: nowrap;
+
+  /* identical to box height, or 23px */
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  /* Black */
+  color: #000000; 
+}
+
+.coin-chart {
+  padding: 2rem;
+  /* Rectangle 2.15 */
+
+  // position: absolute;
+  height: 300px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+
+  /* #fff */
+  background: #FFFFFF;
+
+  /* mercury */
+  border: 1px solid #E2E2E2;
+  box-sizing: border-box;
+}
+
+.coin-list {
+
+  .coin-name {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    
+    /* mercury */
+    border-bottom: 1px solid #E2E2E2;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 332%;
+
+    /* or 43px */
+    text-transform: uppercase;
+
+    color: #000000;
+  }
+
+  li:last-child {
+    border: none;
+  }
+
+  span, h4 {
+    margin: 0 1rem;
+    width: 25%;
+  }
+
+  span {
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  h4 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 127.34%;
+
+  /* identical to box height, or 17px */
+  // text-align: center;
+  text-transform: uppercase;
+
+  color: #000000;
+  }
+}
+
+.all-coins {
+  width: 80%;
+}
+
+.additional-details {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+
+// /* Bitcoin Etehereum XRP Bitcoin Cash Litecoin */
+
+// position: absolute;
+// width: 90px;
+// height: 202px;
+// left: 43px;
+// top: 78px;
+
+// font-family: Open Sans;
+// font-style: normal;
+// font-weight: 600;
+// font-size: 13px;
+// line-height: 332%;
+
+// /* or 43px */
+// text-transform: uppercase;
+
+// color: #000000;
