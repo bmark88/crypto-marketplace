@@ -1,0 +1,44 @@
+
+
+/* Favourite coins */
+h1 {
+  position: absolute;
+  width: 213px;
+  height: 37px;
+  left: 36px;
+  top: 80px;
+  
+  font-family: Gibson;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 29px;
+  line-height: 127.34%;
+  
+  /* identical to box height, or 37px */
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  
+  /* white */
+  color: #FFFFFF;
+}
+
+h2 {
+  /* No Favourite Coins Added */
+
+  position: absolute;
+  width: 158px;
+  height: 17px;
+  left: 36px;
+  top: 140px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 132%;
+
+  /* or 17px */
+
+  /* white */
+  color: #FFFFFF;
+}
