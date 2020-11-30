@@ -1,5 +1,5 @@
 h5 {
-  width: 80%;
+  // width: 80%;
   margin: 0 auto;
   padding-top: 3.6875rem;
 
@@ -16,7 +16,12 @@ h5 {
 }
 
 .selected-coin {
-  // display: flex;
+  @media (min-width: 768px) {
+    display: flex;
+    // width: 84.375%;
+    margin-top: 1.2rem;
+    margin-bottom: 8rem;
+  }
 }
 
 .selected-coin-details {
@@ -24,7 +29,7 @@ h5 {
   margin-top: 1.1875rem;
   margin-left: auto;
   margin-right: auto; 
-  width: 80%;
+  // width: 80%;
   /* Rectangle 8 */
 
   // position: absolute;
@@ -39,6 +44,11 @@ h5 {
   /* mercury */
   border: 1px solid #E2E2E2;
   box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    margin: unset;
+    width: 50%;
+  }
 }
 
 .selected-coin-header {
@@ -85,7 +95,7 @@ h5 {
 }
 
 .trade-options {
-  width: 80%;
+  // width: 80%;
   margin: 0 auto;
   /* Rectangle 6 */
 
@@ -100,6 +110,12 @@ h5 {
   /* mercury */
   border: 1px solid #E2E2E2;
   box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    height: 455px;
+    width: 50%;
+    margin: unset;
+  }
 }
 
 .details-list {
@@ -209,9 +225,10 @@ h5 {
 }
 
 .trade-selectors {
-  width: 80%;
+  width: 83.33%;
   margin: 0 auto;
   margin-top: 3.4375rem;
+  margin-bottom: 6.1875rem;
   
   button {
     width: 100%;
@@ -250,5 +267,9 @@ h5 {
     
     /* white */
     color: #FFFFFF;
+  }
+
+  @media (min-width: 768px) {
+    // margin: unset;
   }
 }

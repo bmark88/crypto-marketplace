@@ -113,7 +113,11 @@ h3 {
 }
 
 .all-coins {
-  width: 80%;
+  // width: 80%;
+
+  @media (min-width: 768px) {
+    // width: 84.375%;
+  }
 }
 
 .additional-details {

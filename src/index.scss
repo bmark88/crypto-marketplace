@@ -20,12 +20,14 @@ code {
 
 .container {
   margin: 0 auto;
-
+  width: 312px;
+  
   @media (min-width: 768px) {
-    width: 768px;
+    width: 648px;
+    // width: 768px;
   }
 
-  @media (min-width: 1024px) {
-    width: 1024px;
-  }
+  // @media (min-width: 1024px) {
+  //   width: 1024px;
+  // }
 }
