@@ -1,0 +1,237 @@
+h5 {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 3.6875rem;
+
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 132%;
+  
+  /* identical to box height, or 20px */
+  
+  /* Black */
+  color: #000000;
+}
+
+.selected-coin {
+  display: flex;
+}
+
+.selected-coin-details {
+  padding: 2.5rem;
+  /* Rectangle 8 */
+
+  position: absolute;
+  width: 312px;
+  height: 455px;
+  left: 32px;
+  top: 664px;
+
+  /* Concrete */
+  background: #F3F3F3;
+
+  /* mercury */
+  border: 1px solid #E2E2E2;
+  box-sizing: border-box;
+}
+
+.selected-coin-header {
+  display: flex;
+  align-items: center;
+  /* Bitcoin (BTC) */
+
+  // position: absolute;
+  // width: 122px;
+  // height: 26px;
+  // left: 98px;
+  // top: 710px;
+
+  // solid white border under coin name
+  // position: absolute;
+  // width: 237px;
+  // height: 0px;
+  // left: 72px;
+  // top: 745px;
+
+  border-bottom: 2px solid #FFFFFF;
+
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 163.3%;
+
+  /* or 26px */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: #000000;
+
+  img {
+    width: 15px;
+    height: 15px;
+    object-fit: cover;
+  }
+
+  h4 {
+    margin-left: 0.645rem;
+  }
+}
+
+.trade-options {
+  /* Rectangle 6 */
+
+  position: absolute;
+  width: 312px;
+  height: 420px;
+  left: 32px;
+  top: 1118px;
+
+  background: #FFFFFF;
+
+  /* mercury */
+  border: 1px solid #E2E2E2;
+  box-sizing: border-box;
+}
+
+.details-list {
+  list-style: none;
+
+  li {
+    // position: absolute;
+    // width: 210px;
+    // height: 231px;
+    // left: 75px;
+    // top: 756px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 13px;
+    line-height: 250%;
+
+    /* or 32px */
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+
+    color: #000000;
+  }
+
+  span {
+    font-weight: bold;
+    white-space: nowrap;
+  }
+}
+
+.add-to-favourites-button {
+  display: flex;
+  align-items: center;
+  color: #4A90E2;
+  margin-top: 24px;
+
+  /* Add to favourites */
+
+  // position: absolute;
+  // width: 123px;
+  // height: 20px;
+  // left: 100px;
+  // top: 1012px;
+
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  // line-height: 163.3%;
+
+  /* identical to box height, or 20px */
+  text-transform: uppercase;
+
+  p {
+    margin-left: 0.525rem;
+  }
+}
+
+.buy-sell-buttons {
+  button {
+    height: 3rem;
+    width: 7.625rem;
+
+    /* Rectangle 6 */
+
+    // position: absolute;
+    // width: 312px;
+    // height: 420px;
+    // left: 32px;
+    // top: 1118px;
+
+    background: #FFFFFF;
+
+    /* mercury */
+    // border: 1px solid #E2E2E2;
+    border: 1px solid #4A90E2;
+    // box-sizing: border-box;
+
+    /* Sell */
+
+    // position: absolute;
+    // width: 33px;
+    // height: 21px;
+    // left: calc(50% - 33px/2 + 1.5px);
+    // top: calc(50% - 21px/2 + 1.5px);
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 155.25%;
+
+    /* identical to box height, or 20px */
+    text-align: center;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+
+    /* Hover Blue */
+    color: #397BCA;
+  }
+}
+
+.trade-selectors {
+  
+  button {
+    width: 15.9375rem;
+    height: 3.625rem;
+    border: none;
+    /* Rectangle */
+  
+    // position: absolute;
+    // left: 0%;
+    // right: 0%;
+    // top: 0%;
+    // bottom: 0%;
+  
+    /* NC blue */
+    background: #4A90E2;
+    /* Submit */
+    
+    // position: absolute;
+    // width: 53px;
+    // height: 21px;
+    // left: calc(50% - 53px/2 - 2px);
+    // top: calc(50% - 21px/2 + 1.5px);
+    
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 155.25%;
+    
+    /* identical to box height, or 20px */
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    
+    /* white */
+    color: #FFFFFF;
+  }
+}

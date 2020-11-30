@@ -44,12 +44,16 @@ h3 {
 }
 
 .coin-list {
+  overflow: hidden;
+  height: 244px;
+  overflow-y: scroll;
 
   .coin-name {
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 13px;
+    text-align: unset;
   }
 
   li {
@@ -78,8 +82,14 @@ h3 {
   }
 
   span, h4 {
-    margin: 0 1rem;
-    width: 25%;
+    width: 50%;
+    white-space: nowrap;
+    text-align: right;
+
+    @media (min-width: 768px) {
+      // margin: 0 1rem;
+      width: 25%;
+    }
   }
 
   span {
@@ -113,23 +123,3 @@ h3 {
     display: block;
   }
 }
-
-
-// /* Bitcoin Etehereum XRP Bitcoin Cash Litecoin */
-
-// position: absolute;
-// width: 90px;
-// height: 202px;
-// left: 43px;
-// top: 78px;
-
-// font-family: Open Sans;
-// font-style: normal;
-// font-weight: 600;
-// font-size: 13px;
-// line-height: 332%;
-
-// /* or 43px */
-// text-transform: uppercase;
-
-// color: #000000;
