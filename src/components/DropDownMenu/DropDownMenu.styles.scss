@@ -1,0 +1,40 @@
+.drop-down-menu {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.0625rem;
+  /* Line 7 */
+  
+  // position: absolute;
+  // width: 255px;
+  // height: 0px;
+  // left: 58px;
+  // top: 1298px;
+  
+  /* mercury */
+  border-bottom: 1px solid #E2E2E2;
+
+  /* amount */
+
+  // position: absolute;
+  // width: 51px;
+  // height: 20px;
+  // left: 58px;
+  // top: 1331px;
+
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 155.25%;
+
+  /* or 20px */
+  text-transform: capitalize;
+
+  color: #000000;
+
+  svg {
+    margin-bottom: 0.3125rem;
+    align-self: flex-end;
+  }
+}

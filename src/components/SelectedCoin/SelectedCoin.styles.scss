@@ -16,15 +16,19 @@ h5 {
 }
 
 .selected-coin {
-  display: flex;
+  // display: flex;
 }
 
 .selected-coin-details {
   padding: 2.5rem;
+  margin-top: 1.1875rem;
+  margin-left: auto;
+  margin-right: auto; 
+  width: 80%;
   /* Rectangle 8 */
 
-  position: absolute;
-  width: 312px;
+  // position: absolute;
+  // width: 312px;
   height: 455px;
   left: 32px;
   top: 664px;
@@ -81,10 +85,12 @@ h5 {
 }
 
 .trade-options {
+  width: 80%;
+  margin: 0 auto;
   /* Rectangle 6 */
 
-  position: absolute;
-  width: 312px;
+  // position: absolute;
+  // width: 312px;
   height: 420px;
   left: 32px;
   top: 1118px;
@@ -153,6 +159,12 @@ h5 {
 }
 
 .buy-sell-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 3.1875rem;
+  width: 90%;
+  margin: 0 auto;
+
   button {
     height: 3rem;
     width: 7.625rem;
@@ -197,11 +209,16 @@ h5 {
 }
 
 .trade-selectors {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 3.4375rem;
   
   button {
-    width: 15.9375rem;
+    width: 100%;
+    // width: 15.9375rem;
     height: 3.625rem;
     border: none;
+    margin-top: 3.3125rem;
     /* Rectangle */
   
     // position: absolute;

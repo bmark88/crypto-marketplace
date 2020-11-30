@@ -1,5 +1,7 @@
 import React from 'react';
 
+import DropDownMenu from '../DropDownMenu/DropDownMenu.component';
+
 import './SelectedCoin.styles.scss';
 
 const SelectedCoin = (props) => {
@@ -15,15 +17,15 @@ const SelectedCoin = (props) => {
         <>
           <div className='selected-coin-details'>
             <span className='selected-coin-header'>
-              <img src={`${coinDetails.image}`}/>
+              <img src={`${coinDetails.image}`} alt='coin logo'/>
               <h4>{coinDetails.name}</h4>
             </span>
             <ul className='details-list'>
-              <li><span>Current Price:</span>${coinDetails.current_price}</li>
+              <li><span>Current Price: </span>${coinDetails.current_price}</li>
               <li><span>Market Cap: </span>{coinDetails.market_cap}</li>
               <li><span>Low 24h: </span>{coinDetails.low_24h}</li>
               <li><span>High 24h: </span>{coinDetails.high_24h}</li>
-              <li><span>Circulating Supply: </span>{coinDetails.circulating_supply}</li>
+              <li><span>Circulating Supply: </span>{coinDetails.circulating_supply.toFixed(0)}</li>
               <li><span>Total Supply: </span>{coinDetails.total_supply}</li>
               <li><span>Market Cap Rank: </span>{coinDetails.market_cap_rank}</li>
             </ul>
@@ -40,8 +42,8 @@ const SelectedCoin = (props) => {
               <button>Sell</button>
             </div>
             <div className='trade-selectors'>
-              <div>Select Trade Currency (DROPDOWN)</div>
-              <div>Amount (DROPDOWN)</div>
+              <DropDownMenu dropDownName='Select Trade Currency'/>
+              <DropDownMenu dropDownName='Amount' />
               <button>Submit</button>
             </div>
           </div>
