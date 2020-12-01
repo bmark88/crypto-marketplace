@@ -37,4 +37,44 @@
     margin-bottom: 0.3125rem;
     align-self: flex-end;
   }
+
+  input {
+    border: none;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 155.25%;
+
+    &::placeholder {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 155.25%;
+      color: #000000;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.drop-down-list-items {
+  height: 0;
+  overflow: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  background-color: white;
+  width: 16.2rem;
+  transition: height 800ms;
+
+  li:hover {
+    background-color: #F3F3F3;
+  }
+}
+
+.visible {
+  height: 7.5rem;
 }

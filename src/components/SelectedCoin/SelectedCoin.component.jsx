@@ -1,12 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import DropDownMenu from '../DropDownMenu/DropDownMenu.component';
 
 import './SelectedCoin.styles.scss';
 
 const SelectedCoin = (props) => {
-  const { selectedCoin, coinDetails} = props;
-  console.log({coinDetails, selectedCoin})
+  const { selectedCoin, coinDetails, coins } = props;
+
+  const [tradeCurrency, setTradeCurrency] = useState('');
+  const [tradeAmount, setTradeAmount] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+  
+  const handleCurrency = (e) => {
+    setTradeCurrency(e.target.innerText);
+  };
+  
+  const handleChange = (e) => {
+    e.preventDefault();
+
+    if (e.target.placeholder === 'Amount') {
+      setTradeAmount(e.target.value)
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!selectedCoin || !tradeCurrency) return;
+
+    const selectedCoinProperties = coins.filter(coin => 
+      coin.name.toUpperCase() === selectedCoin)[0]
+
+    const tradeCurrencyProperties = coins.filter(coin => 
+      coin.name === tradeCurrency)[0]
+        
+    const purchasedAmount = tradeCurrencyProperties.current_price * tradeAmount / (selectedCoinProperties.current_price);
+
+    if (tradeAmount && tradeCurrencyProperties && purchasedAmount && selectedCoinProperties) {
+
+      const message = `You have Purchased ${tradeAmount} ${tradeCurrencyProperties.symbol.toUpperCase()} for ${purchasedAmount} ${selectedCoinProperties.symbol.toUpperCase()}`
+        
+      setSuccessMessage(message);
+    }
+  };
 
   return (
     <section className='selected-coin container'>
@@ -42,11 +78,28 @@ const SelectedCoin = (props) => {
               <button>Sell</button>
             </div>
             <div className='trade-selectors'>
-              <DropDownMenu dropDownName='Select Trade Currency'/>
-              <DropDownMenu dropDownName='Amount' />
-              <button>Submit</button>
+              <form onSubmit={handleSubmit}>
+                <DropDownMenu 
+                  id='select-trade-currency'
+                  dropDownName='Select Trade Currency' 
+                  coins={coins}
+                  onChange={handleChange}
+                  setCurrency={handleCurrency}
+                  tradeCurrency={tradeCurrency}
+                />
+                <DropDownMenu 
+                  id='amount'
+                  dropDownName='Amount' 
+                  coins={coins}
+                  onChange={handleChange}
+                  value={tradeAmount}
+                  selectedCoin={selectedCoin}
+                />
+                <button>Submit</button>
+                <p className='success-message'>{successMessage}</p>
+              </form>
             </div>
-          </div>
+        </div>
         </>
       }
     </section>

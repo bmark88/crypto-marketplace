@@ -177,13 +177,14 @@ h5 {
 .buy-sell-buttons {
   display: flex;
   justify-content: space-evenly;
-  padding-top: 3.1875rem;
+  padding-top: 2.6875rem;
   width: 90%;
   margin: 0 auto;
 
   button {
     height: 3rem;
     width: 7.625rem;
+    cursor: pointer;
 
     /* Rectangle 6 */
 
@@ -272,4 +273,27 @@ h5 {
   @media (min-width: 768px) {
     // margin: unset;
   }
+}
+
+.success-message {
+  margin-top: 1rem;
+  padding-bottom: 2.6875rem;
+  // position: absolute;
+  // width: 270px;
+  // height: 19px;
+  // left: calc(50% - 270px/2 + 165px);
+  // top: 1129px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 155.25%;
+
+  /* identical to box height, or 19px */
+  text-transform: capitalize;
+
+  /* Complete */
+  color: #00BC7C;
+
 }

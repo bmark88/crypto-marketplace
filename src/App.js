@@ -40,8 +40,15 @@ function App() {
   return (
     <>
       <NavHeader />
-      <AllCoins onClick={handleClick} coins={coins} />
-      <SelectedCoin selectedCoin={selectedCoin} coins={coins} coinDetails={coinDetails} />
+      <AllCoins 
+        onClick={handleClick} 
+        coins={coins} 
+      />
+      <SelectedCoin 
+        selectedCoin={selectedCoin} 
+        coins={coins} 
+        coinDetails={coinDetails} 
+      />
     </>
   );
 }
