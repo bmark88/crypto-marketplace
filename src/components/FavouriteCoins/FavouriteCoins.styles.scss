@@ -58,8 +58,18 @@
   }
 }
 
+.fav-coin-padding {
+  padding: 0.4375rem;
+}
+
 .fav-coin-list {
+  position: absolute;
+  width: 700px;
   display: flex;
+  flex-wrap: wrap;
+  overflow: none;
+  height: 100px;
+  overflow-y: scroll;
 }
 
 /* Favourite coins */

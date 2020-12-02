@@ -36,10 +36,10 @@ const SelectedCoin = (props) => {
     }
 
     const selectedCoinProperties = coins.filter(coin => 
-      coin.name.toUpperCase() === selectedCoin)[0]
+      coin.name.toUpperCase() === selectedCoin)[0];
 
     const tradeCurrencyProperties = coins.filter(coin => 
-      coin.name === tradeCurrency)[0]
+      coin.name === tradeCurrency)[0];
         
     const purchasedAmount = tradeCurrencyProperties.current_price * tradeAmount / (selectedCoinProperties.current_price);
 
@@ -61,8 +61,6 @@ const SelectedCoin = (props) => {
 
   const handleTradeMethod = (e) => {
     setTradeMethod(e.target.innerText.toLowerCase());
-
-    console.log(tradeMethod)
   };
 
   return (

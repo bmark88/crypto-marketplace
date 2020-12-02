@@ -7,7 +7,7 @@ import './NavHeader.styles.scss';
 const NavHeader = (props) => (
   <nav className='nav-header'>
     <section className='favourite-coins container'>
-      <FavouriteCoins coins={props.coins} />
+      <FavouriteCoins favoriteCoins={props.favoriteCoins} coins={props.coins} />
     </section>
   </nav>
 );

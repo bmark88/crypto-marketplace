@@ -7,10 +7,16 @@ import AllCoins from './components/AllCoins/AllCoins.component';
 import SelectedCoin from './components/SelectedCoin/SelectedCoin.component';
 
 function App() {
+  let storedCoins = []
+
+  if (localStorage.getItem('favoriteCoins')) {
+    storedCoins = JSON.parse(localStorage.getItem('favoriteCoins'))[0];
+  }
+
   const [selectedCoin, setSelectedCoin] = useState();
   const [coinDetails, setCoinDetails] = useState();
   const [coins, setCoins] = useState();
-  const [favoriteCoins, setFavoriteCoins] = useState([]);
+  const [favoriteCoins, setFavoriteCoins] = useState(storedCoins);
 
   const fetchCoins = async () => {
     return await fetch(
@@ -38,18 +44,16 @@ function App() {
   };
 
   const handleAddToFavorites = (coinImage, coinName) => {
-    if (!favoriteCoins.includes(selectedCoin)) {
-      
-      setFavoriteCoins([...favoriteCoins, selectedCoin]);
-      localStorage.setItem('favoriteCoins', JSON.stringify([favoriteCoins, {coinImage, coinName}]));
-
-      console.log('favCoins app ==>', favoriteCoins)  
-    }
+    setFavoriteCoins([...favoriteCoins, {coinImage, coinName}]);
   };
+
+  useEffect(() => {
+    localStorage.setItem('favoriteCoins', JSON.stringify([favoriteCoins]));
+  }, [favoriteCoins])
 
   return (
     <>
-      <NavHeader coins={coins} />
+      <NavHeader favoriteCoins={favoriteCoins} />
       <AllCoins 
         onClick={handleClick} 
         coins={coins} 
