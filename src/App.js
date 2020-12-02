@@ -37,11 +37,13 @@ function App() {
     setSelectedCoin(e.target.innerText);
   };
 
-  const handleFavorites = (coinImage, coinName) => {
+  const handleAddToFavorites = (coinImage, coinName) => {
     if (!favoriteCoins.includes(selectedCoin)) {
       
       setFavoriteCoins([...favoriteCoins, selectedCoin]);
       localStorage.setItem('favoriteCoins', JSON.stringify([favoriteCoins, {coinImage, coinName}]));
+
+      console.log('favCoins app ==>', favoriteCoins)  
     }
   };
 
@@ -56,7 +58,7 @@ function App() {
         selectedCoin={selectedCoin} 
         coins={coins} 
         coinDetails={coinDetails}
-        setFavorites={handleFavorites}
+        setFavorites={handleAddToFavorites}
       />
     </>
   );

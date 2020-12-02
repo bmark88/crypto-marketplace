@@ -3,7 +3,7 @@ import React from 'react';
 import './FavouriteCoins.styles.scss';
 
 const FavouriteCoins = (props) => {
-  const { coins } = props;
+  // const { coins } = props;
   const favoriteCoinsList = JSON.parse(localStorage.getItem('favoriteCoins'));
   console.log(favoriteCoinsList)
 
@@ -13,13 +13,14 @@ const FavouriteCoins = (props) => {
       {!favoriteCoinsList ? <h2>No Favourite Coins Added</h2> : 
         <div className='fav-coin-list'>
         {favoriteCoinsList.map(coin => 
-          <div className='fav-coin' key={coin.coinName}>
+          <div className='fav-coin' key={coin}>
             <span>
               <img 
                 className='fav-coin-image' 
                 width='19px' 
                 height='19px' 
                 src={coin.coinImage}
+                alt='coin logo'
               />
               {coin.coinName}
             </span>

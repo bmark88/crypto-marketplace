@@ -188,10 +188,16 @@ h5 {
   width: 90%;
   margin: 0 auto;
 
+  button.selected {
+    background-color: #4A90E2;
+    color: #FFFFFF;
+  }
+
   button {
     height: 3rem;
     width: 7.625rem;
     cursor: pointer;
+    outline: none;
 
     /* Rectangle 6 */
 

@@ -10,6 +10,7 @@ const SelectedCoin = (props) => {
   const [tradeCurrency, setTradeCurrency] = useState('');
   const [tradeAmount, setTradeAmount] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
+  const [tradeMethod, setTradeMethod] = useState(null);
 
   const handleCurrency = (e) => {
     setTradeCurrency(e.target.innerText);
@@ -26,7 +27,13 @@ const SelectedCoin = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!selectedCoin || !tradeCurrency) return;
+    if (!selectedCoin || !tradeCurrency || !tradeAmount) {
+      if (!tradeMethod) {
+        return setSuccessMessage('Please choose an option to buy or sell your coins.');
+      }
+
+      return setSuccessMessage('Please make sure a trade currency is selected with an amount.');
+    }
 
     const selectedCoinProperties = coins.filter(coin => 
       coin.name.toUpperCase() === selectedCoin)[0]
@@ -36,12 +43,26 @@ const SelectedCoin = (props) => {
         
     const purchasedAmount = tradeCurrencyProperties.current_price * tradeAmount / (selectedCoinProperties.current_price);
 
+    const soldAmount = (tradeCurrencyProperties.current_price) / selectedCoinProperties.current_price * tradeAmount;
+
     if (tradeAmount && tradeCurrencyProperties && purchasedAmount && selectedCoinProperties) {
 
-      const message = `You have Purchased ${tradeAmount} ${tradeCurrencyProperties.symbol.toUpperCase()} for ${purchasedAmount} ${selectedCoinProperties.symbol.toUpperCase()}`
-        
-      setSuccessMessage(message);
+      if (tradeMethod === 'buy') {
+        const buyMessage = `You have Purchased ${tradeAmount} ${tradeCurrencyProperties.symbol.toUpperCase()} for ${purchasedAmount} ${selectedCoinProperties.symbol.toUpperCase()}`
+          
+        setSuccessMessage(buyMessage);
+      } else if (tradeMethod === 'sell') {
+        const sellMessage = `You have Sold ${tradeAmount} ${tradeCurrencyProperties.symbol.toUpperCase()} for ${soldAmount} ${selectedCoinProperties.symbol.toUpperCase()}`
+
+        setSuccessMessage(sellMessage);
+      }
     }
+  };
+
+  const handleTradeMethod = (e) => {
+    setTradeMethod(e.target.innerText.toLowerCase());
+
+    console.log(tradeMethod)
   };
 
   return (
@@ -74,8 +95,17 @@ const SelectedCoin = (props) => {
           </div>
           <div className='trade-options'>
             <div className='buy-sell-buttons'>
-              <button>Buy</button>
-              <button>Sell</button>
+              <button 
+                className={tradeMethod === 'buy' ? 'selected' : ''} 
+                onClick={handleTradeMethod}>
+                  Buy
+              </button>
+              <button 
+                className={tradeMethod === 'sell' ? 'selected' : ''} 
+                onClick={handleTradeMethod}
+              >
+                Sell
+              </button>
             </div>
             <div className='trade-selectors'>
               <form onSubmit={handleSubmit}>
