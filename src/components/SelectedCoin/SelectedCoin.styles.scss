@@ -146,11 +146,12 @@ h5 {
   }
 }
 
-.add-to-favourites-button {
+#add-to-favourites-button {
   display: flex;
   align-items: center;
   color: #4A90E2;
   margin-top: 24px;
+  cursor: pointer;
 
   /* Add to favourites */
 
@@ -171,6 +172,12 @@ h5 {
 
   p {
     margin-left: 0.525rem;
+  }
+}
+
+#select-trade-currency, #amount, button, input {
+  &:hover {
+    cursor: pointer;
   }
 }
 

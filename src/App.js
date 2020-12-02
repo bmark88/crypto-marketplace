@@ -10,6 +10,7 @@ function App() {
   const [selectedCoin, setSelectedCoin] = useState();
   const [coinDetails, setCoinDetails] = useState();
   const [coins, setCoins] = useState();
+  const [favoriteCoins, setFavoriteCoins] = useState([]);
 
   const fetchCoins = async () => {
     return await fetch(
@@ -33,13 +34,20 @@ function App() {
 
   const handleClick = (e) => {
     e.preventDefault();
-
     setSelectedCoin(e.target.innerText);
+  };
+
+  const handleFavorites = (coinImage, coinName) => {
+    if (!favoriteCoins.includes(selectedCoin)) {
+      
+      setFavoriteCoins([...favoriteCoins, selectedCoin]);
+      localStorage.setItem('favoriteCoins', JSON.stringify([favoriteCoins, {coinImage, coinName}]));
+    }
   };
 
   return (
     <>
-      <NavHeader />
+      <NavHeader coins={coins} />
       <AllCoins 
         onClick={handleClick} 
         coins={coins} 
@@ -47,7 +55,8 @@ function App() {
       <SelectedCoin 
         selectedCoin={selectedCoin} 
         coins={coins} 
-        coinDetails={coinDetails} 
+        coinDetails={coinDetails}
+        setFavorites={handleFavorites}
       />
     </>
   );

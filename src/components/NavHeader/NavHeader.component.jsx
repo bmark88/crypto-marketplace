@@ -4,10 +4,10 @@ import FavouriteCoins from '../FavouriteCoins/FavouriteCoins.component';
 
 import './NavHeader.styles.scss';
 
-const NavHeader = () => (
+const NavHeader = (props) => (
   <nav className='nav-header'>
     <section className='favourite-coins container'>
-      <FavouriteCoins />
+      <FavouriteCoins coins={props.coins} />
     </section>
   </nav>
 );
