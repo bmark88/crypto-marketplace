@@ -21,7 +21,8 @@ const FavouriteCoins = (props) => {
                   src={coin.coinImage}
                   alt='coin logo'
                 />
-                {coin.coinName}
+                <p className='coin-full-name'>{coin.coinName}</p>
+                <p className='coin-ticker'>{coin.coinSymbol}</p>
               </span>
             </div>
           </div>

@@ -11,8 +11,13 @@
   align-items: center;
   justify-content: center;
   // position: absolute;
-  width: 152px;
-  height: 67px;
+  width: 76px;
+  height: 37px;
+
+  @media (min-width: 768px) {
+    width: 152px;
+    height: 67px;
+  }
   // left: 189px;
   // top: 178px;
 
@@ -27,8 +32,6 @@
   text-transform: uppercase;
 
   color: #FFFFFF;
-
-
 
   /* white */
   border: 1px solid #FFFFFF;
@@ -70,6 +73,28 @@
   overflow: none;
   height: 100px;
   overflow-y: scroll;
+
+  .coin-full-name {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .coin-ticker {
+      display: none;
+    }
+
+    .coin-full-name {
+      display: block;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 21.25rem;
+
+    .fav-coin-padding {
+      padding: 0.21875rem;
+    }
+  }
 }
 
 /* Favourite coins */

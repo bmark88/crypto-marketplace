@@ -43,8 +43,8 @@ function App() {
     setSelectedCoin(e.target.innerText);
   };
 
-  const handleAddToFavorites = (coinImage, coinName) => {
-    setFavoriteCoins([...favoriteCoins, {coinImage, coinName}]);
+  const handleAddToFavorites = (coinImage, coinName, coinSymbol) => {
+    setFavoriteCoins([...favoriteCoins, {coinImage, coinName, coinSymbol}]);
   };
 
   useEffect(() => {
