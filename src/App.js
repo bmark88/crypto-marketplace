@@ -31,12 +31,12 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (coins) {
+    if (coins && selectedCoin) {
       setCoinDetails(coins.filter(coin => 
         coin.name.toLowerCase() === selectedCoin.toLowerCase())[0]
       )
     }
-  }, [selectedCoin]);
+  }, [selectedCoin, coins]);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -44,7 +44,14 @@ function App() {
   };
 
   const handleAddToFavorites = (coinImage, coinName, coinSymbol) => {
-    setFavoriteCoins([...favoriteCoins, {coinImage, coinName, coinSymbol}]);
+    if (!favoriteCoins.filter(coin => coin.coinName === coinName)[0]) {
+      setFavoriteCoins([...favoriteCoins, { coinImage, coinName, coinSymbol }]);
+    }
+  };
+
+  const handleRemoveFromFavorites = (coinName) => {
+    const favoriteCoinsAfterRemovedFavorite = favoriteCoins.filter(coin => coin.coinName !== coinName)
+    setFavoriteCoins([...favoriteCoinsAfterRemovedFavorite]);
   };
 
   useEffect(() => {
@@ -53,7 +60,10 @@ function App() {
 
   return (
     <>
-      <NavHeader favoriteCoins={favoriteCoins} />
+      <NavHeader 
+        favoriteCoins={favoriteCoins} 
+        removeFavoriteCoin={handleRemoveFromFavorites}
+      />
       <AllCoins 
         onClick={handleClick} 
         coins={coins} 

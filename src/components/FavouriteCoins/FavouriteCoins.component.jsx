@@ -3,7 +3,7 @@ import React from 'react';
 import './FavouriteCoins.styles.scss';
 
 const FavouriteCoins = (props) => {
-  const { favoriteCoins } = props;
+  const { favoriteCoins, removeFavoriteCoin } = props;
 
   return (
     <>
@@ -11,7 +11,11 @@ const FavouriteCoins = (props) => {
       {favoriteCoins.length === 0 ? <h2>No Favourite Coins Added</h2> : 
         <div className='fav-coin-list container'>
         {favoriteCoins.map((coin, idx) => 
-          <div className='fav-coin-padding' key={idx}> {/* index should not be used as key, but is used temporarily to handle errors when the same fav coin is added  */}
+          <div 
+            className='fav-coin-padding' 
+            key={idx} 
+            onClick={() => removeFavoriteCoin(coin.coinName)}
+          > {/* index should not be used as key, but is used temporarily to handle errors when the same fav coin is added  */}
             <div className='fav-coin'>
               <span>
                 <img 
