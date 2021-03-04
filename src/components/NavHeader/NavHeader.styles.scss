@@ -1,17 +1,10 @@
-
-
 .nav-header {
   display: flex;
   align-items: center;
-  /* Rectangle 7 */
-  // position: absolute;
-  // width: 392px;
   height: 256px;
   left: 0px;
   top: 0px;
-
-  /* NC blue */
-  background: #4A90E2;
+  background: #4a90e2;
 
   @media (min-width: 768px) {
     height: 338px;

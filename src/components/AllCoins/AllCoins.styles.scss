@@ -1,45 +1,30 @@
 h3 {
- /* All Coins */
-
-  // position: absolute;
+  /* All Coins */
   width: 90px;
   height: 23px;
   left: 32px;
   top: 299px;
   margin-top: 2rem;
   margin-bottom: 1rem;
-
   font-family: Gibson;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 127.34%;
-
   white-space: nowrap;
-
-  /* identical to box height, or 23px */
   letter-spacing: 0.02em;
   text-transform: uppercase;
-
-  /* Black */
-  color: #000000; 
+  color: #000;
 }
 
 .coin-chart {
   padding: 2rem;
-  /* Rectangle 2.15 */
-
-  // position: absolute;
   height: 300px;
   left: 0px;
   right: 0px;
   top: 0px;
-
-  /* #fff */
-  background: #FFFFFF;
-
-  /* mercury */
-  border: 1px solid #E2E2E2;
+  background: #fff;
+  border: 1px solid #e2e2e2;
   box-sizing: border-box;
 }
 
@@ -49,39 +34,32 @@ h3 {
   overflow-y: scroll;
 
   .coin-name {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: 600;
     font-size: 13px;
     text-align: unset;
-    
   }
-  
+
   span.coin-name {
     &:hover {
       cursor: pointer;
-      background-color: #F3F3F3;
+      background-color: #f3f3f3;
     }
   }
-  
+
   li {
     display: flex;
     justify-content: space-between;
     width: 90%;
     margin: 0 auto;
-    
-    /* mercury */
-    border-bottom: 1px solid #E2E2E2;
-
-    font-family: 'Open Sans';
+    border-bottom: 1px solid #e2e2e2;
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: 600;
     font-size: 13px;
     line-height: 332%;
-
-    /* or 43px */
     text-transform: uppercase;
-
     color: #000000;
   }
 
@@ -89,13 +67,13 @@ h3 {
     border: none;
   }
 
-  span, h4 {
+  span,
+  h4 {
     width: 50%;
     white-space: nowrap;
     text-align: right;
 
     @media (min-width: 768px) {
-      // margin: 0 1rem;
       width: 25%;
     }
   }
@@ -106,25 +84,14 @@ h3 {
   }
 
   h4 {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 127.34%;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 127.34%;
+    text-transform: uppercase;
 
-  /* identical to box height, or 17px */
-  // text-align: center;
-  text-transform: uppercase;
-
-  color: #000000;
-  }
-}
-
-.all-coins {
-  // width: 80%;
-
-  @media (min-width: 768px) {
-    // width: 84.375%;
+    color: #000;
   }
 }
 
